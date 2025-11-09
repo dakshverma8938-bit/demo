@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Latest Notifications" icon-name="standard:notification">
+        <template if:true={notifications}>
+            <template for:each={notifications} for:item="notification">
+                <div key={notification.Id} class="slds-m-around_medium">
+                    <p><strong>Title:</strong> {notification.Title__c}</p>
+                    <p><strong>Description:</strong> {notification.Description__c}</p>
+                </div>
+            </template>
+        </template>
+        <template if:true={error}>
+            <p>An error occurred while fetching notifications.</p>
+        </template>
+    </lightning-card>
+</template>
