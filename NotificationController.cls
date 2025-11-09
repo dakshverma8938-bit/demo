@@ -10,4 +10,3 @@ public with sharing class NotificationController {
         ];
     }
 }
-heyyy;
